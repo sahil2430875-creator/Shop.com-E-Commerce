@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopZone - Smart Shopping, Better Living">
+  <title>Shop.com | Smart Shopping, Better Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div>🚚 Free Delivery on orders over ₹499</div>
+    <div class="top-links"><span>☎ 24/7 Customer Support</span><span>⌖ Track Order</span><span>Help & Support</span><span>English⌄</span></div>
+  </div>
+
+  <header class="header">
+    <div class="brand-row">
+      <a class="brand" href="#home"><span class="cart-logo">🛒</span><span><strong>Shop<span>.com</span></strong><small>Smart Shopping, Better Living</small></span></a>
+      <div class="search-wrap">
+        <select id="categorySelect"><option>All Categories</option><option>Mobiles</option><option>Laptops</option><option>Electronics</option><option>Fashion</option><option>Home & Living</option><option>Beauty</option><option>Sports</option><option>Books</option></select>
+        <input id="searchInput" type="search" placeholder="Search for products...">
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="actions"><button>♙ <span>Login / Signup</span></button><button>♡ <span>Wishlist</span><b id="wishCount">0</b></button><button id="cartBtn">🛒 <span>Cart</span><b id="cartCount">0</b></button></div>
+    </div>
+    <nav class="nav-row"><button class="all-cat">☰ &nbsp; All Categories</button><a class="active" href="#home">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#deals">Deals</a><a href="#about">About Us</a><a href="#contact">Contact Us</a></nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">BIG SAVINGS • PREMIUM QUALITY</p><h1>Big Savings on<br><span>Smart Shopping</span></h1><p>Discover the best products at unbeatable prices.<br>Top brands, premium quality, and fast delivery.</p><div class="hero-buttons"><button class="primary" onclick="scrollToShop()">Shop Now</button><button class="secondary" onclick="loadDeals()">Explore Deals</button></div><div class="trust"><span>✧ 100% Original</span><span>⟳ Free Returns</span><span>♢ Secure Payment</span></div></div>
+      <div class="hero-art"><div class="arch"></div><div class="orb"></div><div class="plant">🌿</div><div class="bag">🎒</div><div class="phone">📱</div><div class="headphones">🎧</div><div class="camera">📷</div><div class="watch">⌚</div><div class="mini-cart">🛒</div></div>
+      <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="benefits"><div><span>🚚</span><p><b>Free Delivery</b><small>On orders over ₹499</small></p></div><div><span>🛡️</span><p><b>Secure Payment</b><small>100% secure payment</small></p></div><div><span>⟳</span><p><b>Easy Returns</b><small>30 days return policy</small></p></div><div><span>♧</span><p><b>24/7 Support</b><small>Dedicated support</small></p></div></section>
+
+    <section id="categories" class="section"><div class="section-head"><h2>Shop by Category</h2><button onclick="showAllProducts()">View All →</button></div><div class="category-grid">
+      <button onclick="filterCategory('Mobiles')"><span>📱</span><b>Mobiles</b><small>Smartphones</small></button><button onclick="filterCategory('Laptops')"><span>💻</span><b>Laptops</b><small>Computers</small></button><button onclick="filterCategory('Electronics')"><span>🎧</span><b>Electronics</b><small>Devices</small></button><button onclick="filterCategory('Fashion')"><span>👕</span><b>Fashion</b><small>Clothing</small></button><button onclick="filterCategory('Home & Living')"><span>🛋️</span><b>Home & Living</b><small>Furniture</small></button><button onclick="filterCategory('Beauty')"><span>💄</span><b>Beauty</b><small>Care</small></button><button onclick="filterCategory('Sports')"><span>⚽</span><b>Sports</b><small>Essentials</small></button><button onclick="filterCategory('Books')"><span>📚</span><b>Books</b><small>& More</small></button>
+    </div></section>
+
+    <section id="shop" class="section"><div class="section-head"><h2 id="productsTitle">Featured Products</h2><button onclick="showAllProducts()">View All →</button></div><div id="products" class="product-grid"><div class="loading">Loading products...</div></div></section>
+
+    <section id="deals" class="banners"><div class="banner blue"><div><b>UP TO 50% OFF</b><h2>On Electronics</h2><p>Smart Gadgets for a Smarter Life</p><button onclick="filterCategory('Electronics')">Shop Now →</button></div><div class="banner-icons">💻 📷 🎧 📱</div></div><div class="banner yellow"><div><b>FASHION SALE</b><h2>40% OFF</h2><p>On Top Brands<br>Latest Trends. Best Styles.</p><button onclick="filterCategory('Fashion')">Shop Now →</button></div><div class="banner-icons">👕 👜 👟</div></div></section>
+
+    <section class="newsletter"><span>✉</span><div><b>Subscribe to our Newsletter</b><small>Get the latest updates on new arrivals, deals & more.</small></div><form id="newsletterForm"><input type="email" placeholder="Enter your email" required><button>Subscribe</button></form></section>
+  </main>
+
+  <footer id="contact"><div class="footer-grid"><div><a class="brand light"><span class="cart-logo">🛒</span><span><strong>Shop<span>Zone</span></strong><small>Smart Shopping, Better Living</small></span></a><p>Your one-stop destination for online shopping. Quality products, best prices, and fast delivery.</p><div class="social">●　◎　●　▶</div></div><div><h4>Quick Links</h4><a href="#about">About Us</a><a href="#contact">Contact Us</a><a href="#">Track Order</a><a href="#">FAQs</a><a href="#">Shipping Policy</a><a href="#">Return Policy</a></div><div><h4>Customer Service</h4><a href="#">Help & Support</a><a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a><a href="#">Cancellation Policy</a><a href="#">Size Guide</a><a href="#">Sitemap</a></div><div><h4>Categories</h4><a href="#categories">Mobiles</a><a href="#categories">Laptops</a><a href="#categories">Electronics</a><a href="#categories">Fashion</a><a href="#categories">Home & Living</a><a href="#categories">Beauty</a><a href="#categories">Sports</a><a href="#categories">Books & More</a></div><div><h4>Secure Payment</h4><p>We accept all major credit & debit cards and net banking.</p><div class="payments">VISA　●●　RuPay　UPI</div><p>♢ 100% Secure Payments</p></div></div><div class="copyright"><span>© 2024 ShopZone. All Rights Reserved.</span><span>Made with ❤️ for better shopping experience.</span></div></footer>
+
+  <aside id="cartDrawer" class="drawer"><div class="drawer-head"><h2>Your Cart</h2><button onclick="toggleCart()">×</button></div><div id="cartItems"></div><div class="cart-bottom"><div><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><button class="primary" onclick="openCheckout()">Checkout</button></div></aside>
+  <div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+  <div id="checkoutModal" class="modal"><div class="modal-card"><button class="modal-close" onclick="closeCheckout()">×</button><h2>Complete Your Order</h2><p>Enter delivery details. Payment can be integrated later.</p><form id="checkoutForm"><input name="name" placeholder="Full Name" required><input name="email" type="email" placeholder="Email" required><input name="phone" placeholder="Phone Number" required><textarea name="address" placeholder="Delivery Address" required></textarea><button class="primary" type="submit">Place Order</button></form><div id="orderMessage"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
